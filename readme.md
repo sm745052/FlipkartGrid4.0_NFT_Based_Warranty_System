@@ -1,4 +1,4 @@
-**NFT based warranty implementation on Blockchain**
+**NFT based warranty implementation on Blockchain** by Tomp Comders
 
 To run the backend **[The backend will deploy the contract]**
 ```sh
