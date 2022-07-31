@@ -1,0 +1,5 @@
+flask
+eth-brownie
+psycopg2
+python-dotenv
+flask-cors

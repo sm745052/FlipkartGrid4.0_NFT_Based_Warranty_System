@@ -1,0 +1,178 @@
+signup
+----------
+input
+{
+    "account_address" : string
+    "email": string
+    "password": string
+}
+
+output
+200, success
+error
+------------
+brand/signup
+-------------
+
+input
+{
+    "account_address" : string
+    "name": string
+    "email": string
+    "password": string
+}
+
+output
+200, success
+error
+
+--------------
+login
+---------------
+input
+{
+    "email": string,
+    "password": string
+}
+
+output
+{
+    "account_address" : string
+}
+
+
+--------------
+brand/login
+---------------
+input
+{
+    "email": string,
+    "password": string
+}
+
+output
+{
+    "account_address" : string
+}
+
+
+--------------
+brand/createWarranty
+input
+{
+    "account_address" : string
+    "data" : {
+        sl_no string,
+        brand string,
+        brand_address string,
+        brand_email string,
+        product string
+        }
+    "months" : uint256
+}
+output
+{
+    "token_id" : uint256
+}
+
+---------------------------
+/addToCart
+{
+    "account_address":string
+    "name":string
+    "price":string
+    "brand":string
+    "picture":string
+}
+output success
+---------------------------
+/clearCart
+{
+    "account_address":string
+}
+output success
+---------------------------
+/getCart
+{
+    "account_address":string
+}
+output example
+{
+    {
+        id,
+        account_address
+        brand
+        name
+        price
+        picture
+    },
+    ...
+}
+---------------------------------
+/buy
+{
+    "account_address":string
+}
+output:
+success
+----------------------------------
+/transferWarranty
+{
+    account_address: string
+    to_address: string
+    token_id: int
+}
+output:
+success
+------------------------------------
+/warrantyData
+{
+    account_address
+    token_id: int
+}
+output:
+EXAMPLE
+{
+    "status": "success",
+    "warranty": {
+        "data": {
+            "brand": "adidas",
+            "brand_address": "asfggfafdgc",
+            "brand_email": "sdfg",
+            "product": "afgasfgsdfvbpass",
+            "sl_no": "sdflguis"
+        },
+        "token_id": 1,
+        "warranty_end_time": "1972-10-17 05:30:01",
+        "warranty_start_time": "1970-01-01 05:30:01",
+        "warranty_validity": "34 months"
+    }
+}
+
+
+/getOrders
+input:
+account_address
+
+/brand/getOrders
+input:
+account_address
+
+/brand/approval
+input:
+account_address
+order_id
+set_status (approved or rejected)
+
+
+/listWarranties
+input:
+account_address
+token_id
+
+/transferHistory
+input:
+account_address
+token_id
+
+---------------------------------------
